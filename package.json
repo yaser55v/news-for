@@ -1,0 +1,23 @@
+{
+  "name": "news-for",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yaser55v/news-for.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yaser55v/news-for/issues"
+  },
+  "homepage": "https://github.com/yaser55v/news-for#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
+}
