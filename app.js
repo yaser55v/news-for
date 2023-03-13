@@ -1,9 +1,7 @@
-import config from "./config.js";
 import staticData from "./staticData.js";
-
-const apiKey = config.apiKey;
-const apiUrl = config.apiUrl;
-const defaultImg = config.defaultImg;
+const apiKey= 'fc5f02b25fab47ffa63256f9c9a74de8'
+const apiUrl= `https://newsapi.org/v2/top-headlines`
+const defaultImg= "https://cdn.pixabay.com/photo/2014/05/21/22/28/old-newspaper-350376_1280.jpg"
 
 const newsContainer = document.querySelector(".news-container");
 const searchInput = document.querySelector("#search-input");
@@ -65,8 +63,6 @@ function fetchNewsArticles() {
     })
     .catch((error) => console.error(error));
 }
-
-
 
 function displayArticles(articles) {
   if (currentPage === 1) {
