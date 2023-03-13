@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-logo">
+          <a href="#">
+            <img
+              src="https://cdn.pixabay.com/photo/2017/03/16/21/18/logo-2150297_1280.png"
+              alt="logo"
+            />
+            <span>NEWS</span>
+          </a>
+        </div>
+        <ul class="navbar-menu">
+          <li class="navbar-item"><a href="#">Home</a></li>
+          <li class="navbar-item"><a href="#business">Business</a></li>
+          <li class="navbar-item">
+            <a href="#entertainment">Entertainment</a>
+          </li>
+          <li class="navbar-item"><a href="#health">Health</a></li>
+          <li class="navbar-item"><a href="#science">Science</a></li>
+          <li class="navbar-item"><a href="#sports">Sports</a></li>
+          <li class="navbar-item"><a href="#technology">Technology</a></li>
+        </ul>
+        <button class="navbar-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <main class="container">
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search articles..." />
+        <div class="categorys">
+          <select id="category-select">
+            <option value="">All Categories</option>
+            <option value="business">Business</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="health">Health</option>
+            <option value="science">Science</option>
+            <option value="sports">Sports</option>
+            <option value="technology">Technology</option>
+          </select>
+          <select id="country-select">
+            <option value="us">USA</option>
+            <option value="in">India</option>
+            <option value="au">Australia</option>
+            <option value="de">Germany</option>
+            <option value="fr">France</option>
+          </select>
+        </div>
+        <!-- <button id="search-btn">Search</button> -->
+      </div>
+
+      <div class="news-container"></div>
+      <button id="load-more-btn">Load More</button>
+    </main>
+
+    <footer>
+      <p>Copyright © 2023 NEWS</p>
+    </footer>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

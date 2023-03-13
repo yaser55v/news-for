@@ -1,0 +1,278 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: #e5f0fe;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0056b3;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+.navbar-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Navbar Logo */
+.navbar-logo a {
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.navbar-logo a img {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
+
+/* Navbar Menu */
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  margin-left: 16px;
+}
+
+.navbar-item a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.navbar-item a:hover {
+  color: #add5ff;
+}
+
+/* Navbar Toggle */
+.navbar-toggle {
+  display: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.navbar-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    z-index: 999;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar-item {
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 5px);
+  }
+
+  .navbar-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+/* MAIN */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.search-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 20px;
+  /*   border: 1px solid #0077ff;
+  border-radius: 5px; */
+  padding: 4px;
+}
+
+#search-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  font-size: 1rem;
+  margin-right: 6px;
+}
+
+#category-select,
+#country-select {
+  padding: 10px;
+  border: none;
+  font-size: 1rem;
+}
+
+@media (max-width: 767px) {
+  .search-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #search-input {
+    margin-bottom: 10px;
+    margin-right: 0px;
+  }
+
+  #category-select,
+  #country-select {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #category-select {
+    margin-right: 5px;
+  }
+
+  .categorys {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.news-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.news-card {
+  width: 300px;
+  padding: 16px;
+  background-color: #dfedfd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 10px;
+}
+
+.news-card img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.news-card h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333333;
+  margin-top: 10px;
+}
+
+.news-card p {
+  font-size: 0.7rem;
+  color: #333333;
+  margin: 10px 0;
+  height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.news-card a {
+  font-size: 0.8rem;
+  color: #0077ff;
+  text-decoration: none;
+}
+
+.news-card a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .news-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .news-card {
+    width: 100%;
+    padding: 12px;
+  }
+  .news-card h2 {
+    font-size: 0.8rem;
+  }
+  .news-card p {
+    font-size: 0.6rem;
+  }
+}
+#load-more-btn {
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+#load-more-btn:hover {
+  background-color: #0062cc;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #01254d;
+  color: #efefef;
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-top: 20px;
+}
